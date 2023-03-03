@@ -1,0 +1,11 @@
+eres un charmander recién nacido. Todo parece tranquilo pero pronto descubriras que deberás enfrentarte a muchos peligros.
+
+
+
+
+Aquí viene un entrenador pokemón que quiere atraparte.
+Escribe "escapar" para salir corriendo o "pelear" para enfrentarlo.
+> escapar: En la vida deberás enfrentarte a muchos entrenadores, no tengas miedo y regresa a enfrentarlo.
+> pelear: Eres muy valiente. Ahora decide que harás primero.
+
+El entrenador usará un squirtle para intentar capturarte.
