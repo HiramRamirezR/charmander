@@ -29,18 +29,16 @@ restart.addEventListener('click', () => {
 })
 
 ok.addEventListener('click', () => {
-    name = input.value
-    //contador = 0
+  //Día 1
+  name = input.value
     if (contador === 0 && name !== '') {
-      name = input.value
-      text.innerHTML = `${name}, eres un charmander recién nacido. Pronto descubriras que hay a muchos peligros.`
+      name2 = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+      text.innerHTML = `${name2}, eres un charmander recién nacido. Pronto descubriras que hay a muchos peligros en la vida de un pokemón desde que es bebé hasta que llega a su máxima evolución. <br>Pulsa el botón de 'Ok' para continuar.`
       seguir()
-    //contador = 1
     } else if (contador === 1) {
       img.src = tormentaImg
       text.innerHTML = "Ahí viene una tormenta, debes esconderte para que tu cola no se apague.<br>¿Qué haces?<br>1. Te escondes en un árbol.<br>2. Te escondes en una cueva."
       seguir()
-    //contador = 2
     } else if (contador === 2 && input.value === '1') {
       img.src = arbolImg
       text.innerHTML = "El árbol se derrumba y te aplasta.<br>Has muerto."
@@ -49,7 +47,6 @@ ok.addEventListener('click', () => {
       img.src = cuevaImg
       text.innerHTML = "Te escondes en una cueva y te proteges de la tormenta. Ahora debes salir de la cueva.<br>¿Qué haces?<br>1. Sales corriendo.<br>2. Sales caminando."
       seguir()
-    //contador = 3
     } else if (contador === 3 && input.value === '1') {
       img.src = blastoiseImg
       text.innerHTML = "Por salir corriendo haces mucho ruido y despiertas al dueño de la cueva. Un enorme Blastoise que te ataca y apaga tu flama.<br>Has muerto."
@@ -59,7 +56,6 @@ ok.addEventListener('click', () => {
       img.src = foodImg
       text.innerHTML = "Al caminar evitas hacer ruido y escapas sin despertar al dueño de la cueva. Ahora tienes mucha hambre y debes encontrar comida.<br>¿Qué haces?<br>1. Buscas comida en el bosque.<br>2. Buscas comida en la playa."
       seguir()
-    //contador = 4
     } else if (contador === 4 && input.value === '1') {
       img.src = pidgeottoImg
       text.innerHTML = "En el bosque hay mucha comida de la que te gusta pero también hay muchos peligros para un charmander bebé. De los arbustos sale un pidgeotto enojado porque has entrado en su territorio.<br>¿Qué haces?<br>1. Te escondes en un árbol.<br>2. Atacas con un Lanzallamas."
@@ -75,7 +71,7 @@ ok.addEventListener('click', () => {
       muerte()
     } else if (contador === 5 && input.value === '2') {
       img.src = charmanderAttackImg
-      text.innerHTML = "El pidgeotto esquiva tu ataque y ahora se la piensa mejor antes de atacarte.<br>Por ahora ha decidido que te dejará ir."
+      text.innerHTML = "El pidgeotto esquiva tu ataque y ahora se la piensa mejor antes de atacarte.<br>Por ahora ha decidido que te dejará ir. <br>Pulsa el botón de 'Ok' para continuar."
       seguir()
       contador++
     } else if (contador === 6 && input.value === '1') {
@@ -89,9 +85,10 @@ ok.addEventListener('click', () => {
       muerte()
     } else if (contador === 7) {
       img.src = charmanderSleepImg
-      text.innerHTML = `${name}, has sobrevivido a tu primer día como charmander. Ya te diste cuenta de que ser un charmander bebé no es nada fácil. Lo bueno es que ahora puedes dormir tranquilo.`
+      text.innerHTML = `${name2}, has sobrevivido a tu primer día como charmander. Ahora ya te has dado cuenta de que ser un charmander bebé no es nada fácil. Lo bueno es que ahora puedes dormir tranquilo. <br>Pulsa el botón de 'Ok' para ir al Día 2.`
       seguir()
     }
+  //Día 2
 })
 
 muerte = () => {
