@@ -10,6 +10,7 @@ const blastoiseImg = "https://66.media.tumblr.com/tumblr_ma4fvrTeAk1rfjowdo1_500
 const foodImg = "https://media1.giphy.com/media/JtGnvpnkkXbE2iEw80/giphy.gif?cid=6c09b952985fdbed2c279e689fe6f57b5a5b0ddb0caee3d7&rid=giphy.gif&ct=s"
 const playaImg = "https://storage.ko-fi.com/cdn/useruploads/post/a73190c5-1724-4fc7-988e-d141445646d5_spiaggiapreview.gif"
 const pidgeottoImg = "https://66.media.tumblr.com/tumblr_maorewZFZM1rfjowdo1_500.gif"
+const volcanImg = "https://cdnb.artstation.com/p/assets/images/images/053/596/417/original/bera-fifth-tileset-volcano-spewing.gif?1662574582"
 
 //Dom Elements
 const img = document.querySelector('img')
@@ -20,7 +21,7 @@ const restart = document.querySelector('#restart')
 
 //Variables
 let name = ''
-let contador = 0
+let contador = 8
 
 
 //Event Listeners
@@ -32,8 +33,9 @@ ok.addEventListener('click', () => {
   //Día 1
   name = input.value
     if (contador === 0 && name !== '') {
-      name2 = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
-      text.innerHTML = `${name2}, eres un charmander recién nacido. Pronto descubriras que hay a muchos peligros en la vida de un pokemón desde que es bebé hasta que llega a su máxima evolución. <br>Pulsa el botón de 'Ok' para continuar.`
+      // name2 = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()
+      name2 = 'name'
+      text.innerHTML = `${name2}, eres un charmander recién nacido. Pronto descubriras que hay muchos peligros en la vida de un pokemón desde que es bebé hasta que llega a su máxima evolución. <br>Pulsa el botón de 'Ok' para continuar.`
       seguir()
     } else if (contador === 1) {
       img.src = tormentaImg
@@ -89,6 +91,19 @@ ok.addEventListener('click', () => {
       seguir()
     }
   //Día 2
+      else if (contador === 8) {
+      img.src = charmanderImg
+      text.innerHTML = `Día 2. <br>Pulsa el botón de 'Ok' para continuar.`
+      seguir()
+    } else if (contador === 9) {
+      img.src = volcanImg
+      text.innerHTML = `A todos los charmanders les gusta vivir cerca de un volcán, así que emprenderás el camino hacia la Tierra de Fuego donde hay muchos volcanes juntos. <br>Pulsa el botón de 'Ok' para continuar.`
+      seguir()
+    } else if (contador === 10) {
+      img.src = volcanImg
+      text.innerHTML = `${name2}, si quieres evolucionar pronto deberás tener algunas batallas para ganar experiencia. <br>¿Quieres pelear o quieres viajar tranquilo? <br>1. Buscas con quien pelear.<br>2. Viajas escondiéndote para evitar peleas.`
+      seguir()
+    }
 })
 
 muerte = () => {
